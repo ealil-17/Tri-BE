@@ -13,7 +13,9 @@ app = FastAPI(
 )
 
 # Load the trained model (fixed path assuming this is in Backend/main.py)
-MODEL_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "model", "arrhythmia_rf_model.pkl")
+# Look for 'model' in the same folder as main.py
+MODEL_PATH = "model/arrhythmia_rf_model.pkl"
+
 
 # Login Request Schema
 class LoginRequest(BaseModel):
